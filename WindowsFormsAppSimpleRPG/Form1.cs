@@ -28,6 +28,8 @@ namespace WindowsFormsAppSimpleRPG
             textBox1.Text += player.Talk();
             textBox1.Text += npc.Talk();
             // 전투
+            Orc orc = new Orc(70, 20);
+            textBox1.Text += orc.Talk();
             Monster monster = new Orc(60, 10);
             textBox1.Text += monster.Talk();
             // 플레이어 공격
