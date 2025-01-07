@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.IO;
 using System.Windows.Forms;
 
@@ -11,19 +12,22 @@ namespace WindowsFormsAppSimpleRPG
         IDictionary<string, string> IdNum = new Dictionary<string, string>();
         public MyOpenFileDialog()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void button_load_Click(object sender, EventArgs e)
         {
             try
             {
+                int sss = 200;
+
+
                 using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 {
                     // 필터 설정
                     openFileDialog.Filter = string.Join("|", new List<string>
                     {
-                        "ALL FILES(*.*)|*.*",
+                        "ALL FILES(*.*)|*.*", "TXT(*.txt)|*.txt",
                         "Bitmap(*.bmp, *.dib)|*.bmp;*.dib",
                         "JPEG(*.jpg, *.jpeg, *.jpe, *.jfif)|*.jpg;*.jpeg;*.jpe;*.jfif",
                         "TIFF(*.tif, *.tiff)|*.tif;*.tiff",
@@ -78,10 +82,10 @@ namespace WindowsFormsAppSimpleRPG
                     MessageBox.Show("accounts.txt 파일을 찾을 수 없습니다.", "파일 없음", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show($"오류가 발생했습니다:");
-                //MessageBox.Show($"오류가 발생했습니다: {ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show($"오류가 발생했습니다:");
+                MessageBox.Show($"오류가 발생했습니다: {ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,5 +102,7 @@ namespace WindowsFormsAppSimpleRPG
                 MessageBox.Show("Wrong Password!!\r\n");
             }
         }
+
+      
     }
 }

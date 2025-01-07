@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsAppSimpleRPG
+﻿namespace WindowsFormsAppSimpleRPG1
 {
     partial class Exception
     {

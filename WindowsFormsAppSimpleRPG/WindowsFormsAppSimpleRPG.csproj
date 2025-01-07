@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BGW2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BGW2.Designer.cs">
+      <DependentUpon>BGW2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BGWexample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BGWexample.Designer.cs">
+      <DependentUpon>BGWexample.cs</DependentUpon>
+    </Compile>
     <Compile Include="Character.cs" />
     <Compile Include="Example.cs" />
     <Compile Include="Exception.cs">
@@ -59,6 +71,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiThreadEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiThreadEx.Designer.cs">
+      <DependentUpon>MultiThreadEx.cs</DependentUpon>
     </Compile>
     <Compile Include="MyOpenDialog.cs">
       <SubType>Form</SubType>
@@ -75,8 +93,17 @@
     <Compile Include="Monster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BGW2.resx">
+      <DependentUpon>BGW2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGWexample.resx">
+      <DependentUpon>BGWexample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiThreadEx.resx">
+      <DependentUpon>MultiThreadEx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyOpenDialog.resx">
       <DependentUpon>MyOpenDialog.cs</DependentUpon>

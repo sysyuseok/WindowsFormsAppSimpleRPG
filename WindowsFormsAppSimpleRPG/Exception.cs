@@ -12,7 +12,7 @@ using System.Linq.Expressions;
 using System.CodeDom;
 
 
-namespace WindowsFormsAppSimpleRPG
+namespace WindowsFormsAppSimpleRPG1
 {
     public partial class Exception : Form
     {

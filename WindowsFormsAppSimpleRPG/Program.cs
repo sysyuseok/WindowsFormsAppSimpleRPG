@@ -16,7 +16,7 @@ namespace WindowsFormsAppSimpleRPG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyOpenFileDialog());
+            Application.Run(new MultiThreadEx());
         }
     }
 }
