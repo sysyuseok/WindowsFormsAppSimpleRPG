@@ -13,14 +13,12 @@ namespace WindowsFormsAppSimpleRPG
         {
             InitializeComponent();
 
-            // 스레드 생성
             Thread thread1 = new Thread(() => UpdatePlayer(progressBar1, ref p[1], 1));
             Thread thread2 = new Thread(() => UpdatePlayer(progressBar2, ref p[2], 2));
             Thread thread3 = new Thread(() => UpdatePlayer(progressBar3, ref p[3], 3));
             Thread thread4 = new Thread(() => UpdatePlayer(progressBar4, ref p[4], 4));
             Thread thread5 = new Thread(() => UpdatePlayer(progressBar5, ref p[5], 5));
 
-            // 스레드 시작
             thread1.Start();
             thread2.Start();
             thread3.Start();
@@ -28,7 +26,6 @@ namespace WindowsFormsAppSimpleRPG
             thread5.Start();
         }
 
-        // ProgressBar 업데이트 메서드
         void UpdatePlayer(ProgressBar progressBar, ref int progress, int playerNumber)
         {
             while (progress < 100)
@@ -41,7 +38,6 @@ namespace WindowsFormsAppSimpleRPG
                 if (progress > 100) progress = 100;
                 int nprogress = progress;
 
-                // UI 업데이트는 UI 스레드에서 수행
                 if (progressBar.InvokeRequired)
                 {
                     progressBar.Invoke(new Action(() =>
